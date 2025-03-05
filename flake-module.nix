@@ -11,13 +11,13 @@
   in {
     packages.softnet = buildRustPackage rec {
       pname = "softnet";
-      version = "0.13.1";
+      version = "0.13.1+20250305";
 
       src = fetchFromGitHub {
-        owner = "cirruslabs";
+        owner = "ink-splatters";
         repo = "${pname}";
         rev = "${version}";
-        hash = "sha256-h8A3XyPH3agSKd/HrHFJrPcMy7qKi3ykVWeVYwX0gH8=";
+        hash = "sha256-v0GGbvAxsoxkodmgQnn9vbjT24qVRlNbetmQpNt5BpQ=";
       };
 
       useFetchCargoVendor = true;
