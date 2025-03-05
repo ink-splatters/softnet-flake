@@ -11,5 +11,5 @@
 ## Building
 
 ```sh
-nix --experimental-feautures 'nix-command flakes' --accept-flake-config github:ink-splatters/softnet-flake
+nix --experimental-features 'nix-command flakes' --accept-flake-config build github:ink-splatters/softnet-flake/0.13.1-upstream
 ```
