@@ -15,6 +15,16 @@
     };
   };
 
+  nixConfig = {
+    extra-substituters = [
+      "https://nix-community.cachix.org" # for fenix
+    ];
+    extra-trusted-public-keys = [
+      "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
+    ];
+    sandbox = "relaxed";
+  };
+
   outputs = inputs @ {flake-parts, ...}:
     flake-parts.lib.mkFlake {inherit inputs;} ({
       flake-parts-lib,
